@@ -1,0 +1,8 @@
+{
+    "SystemInfoSimulation": true,
+    "ApplicationSimulation": true,
+    "SystemInfoDefaultAssembly": true,
+    "SystemInfoAssemblies": [
+        "com.bennykok.runtime-debug-action"
+    ]
+}
