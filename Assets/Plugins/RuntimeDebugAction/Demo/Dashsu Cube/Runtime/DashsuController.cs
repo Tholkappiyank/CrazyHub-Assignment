@@ -156,8 +156,7 @@ namespace BennyKok.RuntimeDebug.Demo.DashsuCube
 
         #region  Debug Action
         [DebugAction(shortcutKey = "q", closePanelAfterTrigger = true)]
-        public void SpawnACube()
-        {
+        public void SpawnACube() {
             var bdy = GameObject.CreatePrimitive(PrimitiveType.Cube).AddComponent<Rigidbody>();
 
             bdy.gameObject.AddComponent<BoxCollider>();
@@ -167,14 +166,12 @@ namespace BennyKok.RuntimeDebug.Demo.DashsuCube
         }
 
         [DebugAction]
-        public void LogSum(int a, int b = 2)
-        {
+        public void LogSum(int a, int b = 2) {
             Debug.Log(a + b);
         }
 
         [DebugAction]
-        public string GameOverText
-        {
+        public string GameOverText {
             get => gameOverText.text.text;
             set => gameOverText.text.SetText(value);
         }
