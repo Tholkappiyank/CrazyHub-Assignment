@@ -5,6 +5,7 @@ Features
        eg. Player's ForwardVelocity, JumpVelocity, LaneSpacing can be changed.
        
   - GoogleMobileAds Version 6.6.1
+     Use External Dependency Resolver to resolve the dependencies for Android.
        
        Jdk Path and version
        ---------------------
