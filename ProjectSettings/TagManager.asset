@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Obstacle
   - Win
+  - Coin
+  - StyleManager
+  - Map
+  - SwipeManager
+  - LeanRoll
+  - LeanFingerTap
   layers:
   - Default
   - TransparentFX

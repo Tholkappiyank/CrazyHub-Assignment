@@ -6,7 +6,7 @@ namespace CrazyHub.Hyderabad.Assignment
     public class GameEvents : MonoBehaviour
     {
        public void Replay() {
-            SceneManager.LoadScene("Base");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        }
 
        public void QuitGame() {

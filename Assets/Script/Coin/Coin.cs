@@ -21,13 +21,18 @@ namespace CrazyHub.Hyderabad.Assignment
 
         private void OnTriggerEnter(Collider other) {
 
-            if(other.tag == "Player") {
+            if (other.tag == "Player") {
                 PlayerManager.NumberOfCoins++;
-                Debug.Log("Coins"+ PlayerManager.NumberOfCoins);
-                FindObjectOfType<AudioManager>().PlaySound("PickUpCoin");
-                Destroy(gameObject);
+                Debug.Log("Coins" + PlayerManager.NumberOfCoins);
+                //FindObjectOfType<AudioManager>().PlaySound("PickUpCoin");
+                gameObject.SetActive(false);
             }
+        }
+
+        private void OnDisable() {
             
         }
+
+
     }
 }

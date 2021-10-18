@@ -5,7 +5,6 @@ public class SwipeManager : MonoBehaviour
     public static bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
-
     private void Update()
     {
         tap = swipeDown = swipeUp = swipeLeft = swipeRight = false;
@@ -75,12 +74,15 @@ public class SwipeManager : MonoBehaviour
 
             Reset();
         }
-
     }
 
     private void Reset()
     {
         startTouch = swipeDelta = Vector2.zero;
         isDraging = false;
+    }
+
+    public Vector2 GetSwipeDelta() {
+        return swipeDelta;
     }
 }
