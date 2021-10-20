@@ -15,5 +15,11 @@ Features
        --------------------
        C:\Users\tholk\AppData\Local\Android\sdk
        
+   - In-App Puchase using Unity's IAP.
+         Enable In-app in Services.
+         Create new ProjectID. 
+         Create Paymnet profile. 
+         Add Products to the App.
+       
 
     
