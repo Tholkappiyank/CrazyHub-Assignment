@@ -3,7 +3,8 @@ namespace CrazyHub.Hyderabad.Assignment
     using System;    
     using UnityEngine;
     using TMPro;
-    using Lean.Touch;  
+    using Lean.Touch;
+    using Random = UnityEngine.Random;
 
     public class PlayerManager : MonoBehaviour
     {
@@ -53,6 +54,9 @@ namespace CrazyHub.Hyderabad.Assignment
             isGameStarted = false;
             GameWin = false;
             NumberOfCoins = 0;
+
+            // Ad intergration
+            AdManager.instance.RequestInterstitial();
         }
 
         // Update is called once per frame
@@ -61,13 +65,20 @@ namespace CrazyHub.Hyderabad.Assignment
             if (GameOver) {
                 Time.timeScale = 0;               
                 audioManager.StopSound("MainTheme");
-                GameOverPanel.SetActive(true);                
+                GameOverPanel.SetActive(true);
+                if(Random.Range(0, 3) == 0) {
+                    AdManager.instance.ShowInterstitial();
+                }
+                
             }
 
             if (GameWin) {              
                 audioManager.StopSound("MainTheme");
                 GameWinPanel.SetActive(true);
                 OnWih?.Invoke();
+
+                AdManager.instance.ShowRewardedAds();
+
             }
 
             coinText.SetText("Coins: "+ NumberOfCoins);
